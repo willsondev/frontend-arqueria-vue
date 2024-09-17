@@ -230,6 +230,6 @@ onMounted(() => {
 <style scoped>
 input:focus, button:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5); /* Sombra de enfoque */
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5); 
 }
 </style>

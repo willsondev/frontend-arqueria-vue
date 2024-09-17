@@ -11,5 +11,5 @@ import Botones from './Botones.vue'
 </script>
 
 <style scoped>
-/* Agrega estilos aquí si es necesario */
+
 </style>

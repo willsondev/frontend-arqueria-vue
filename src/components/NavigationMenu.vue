@@ -88,5 +88,5 @@ const logout = async () => {
 </script>
 
 <style scoped>
-/* Puedes añadir estilos adicionales aquí si es necesario */
+
 </style>

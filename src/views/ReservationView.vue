@@ -34,7 +34,7 @@ const reservedClasses = ref([]);
 const toast = useToast();
 const store = useStore();
 
-const getUser = () => store.getters.getUser; // Asegúrate de que 'getUser' devuelva el estado de autenticación
+const getUser = () => store.getters.getUser; 
 
 const showToast = (type, text) => {
   switch (type) {
@@ -70,7 +70,7 @@ const reserveClass = (cls) => {
     return;
   }
 
-  const userId = user._id; // Suponiendo que el objeto de usuario tiene un campo '_id'
+  const userId = user._id; 
   const key = `reservedClasses_${userId}`;
   const reserved = JSON.parse(localStorage.getItem(key)) || [];
 
@@ -91,7 +91,7 @@ const cancelReservation = (id) => {
     return;
   }
 
-  const userId = user._id; // Suponiendo que el objeto de usuario tiene un campo '_id'
+  const userId = user._id; 
   const key = `reservedClasses_${userId}`;
   const reserved = JSON.parse(localStorage.getItem(key)) || [];
 
@@ -109,7 +109,7 @@ const cancelReservation = (id) => {
 const isReserved = (id) => {
   const user = getUser();
   if (!user) return false;
-  const userId = user._id; // Suponiendo que el objeto de usuario tiene un campo '_id'
+  const userId = user._id; 
   const reserved = JSON.parse(localStorage.getItem(`reservedClasses_${userId}`)) || [];
   return reserved.some(cls => cls._id === id);
 };
@@ -118,7 +118,7 @@ onMounted(() => {
   fetchClasses();
   const user = getUser();
   if (user) {
-    const userId = user._id; // Suponiendo que el objeto de usuario tiene un campo '_id'
+    const userId = user._id; 
     const storedReservations = localStorage.getItem(`reservedClasses_${userId}`);
     if (storedReservations) {
       reservedClasses.value = JSON.parse(storedReservations);

@@ -36,14 +36,14 @@ export default createStore({
     SET_TOKEN(state, token) {
       state.token = token;
       localStorage.setItem('token', token);
-      updateApiClientToken(token); // Actualizar el token en el cliente API
+      updateApiClientToken(token); 
     },
     CLEAR_AUTH(state) {
       state.isAuthenticated = false;
       state.user = null;
       state.token = null;
       localStorage.removeItem('token');
-      updateApiClientToken(''); // Limpiar el token en el cliente API
+      updateApiClientToken(''); 
     },
     CLEAR_USER(state) {
       state.user = null;
@@ -80,11 +80,6 @@ export default createStore({
       try {
         const response = await apiClient.post('/auth/register', userData);
         const { token, user } = response.data;
-
-        // No autenticamos al usuario automáticamente después de registrarse
-        // commit('SET_AUTHENTICATED', true);
-        // commit('SET_USER', user);
-        // commit('SET_TOKEN', token);
 
         return response.data;
       } catch (error) {
@@ -132,7 +127,7 @@ export default createStore({
 
     async logout({ commit }) {
       commit('CLEAR_AUTH');
-      updateApiClientToken(''); // Limpiar el token en el cliente API
+      updateApiClientToken(''); 
     },
 
     // Clases
@@ -152,7 +147,7 @@ export default createStore({
     async fetchReservations({ commit }) {
       commit('SET_LOADING_RESERVATIONS', true);
       try {
-        const response = await apiClient.get('/reservations'); // Cambiar el endpoint si es necesario
+        const response = await apiClient.get('/reservations'); 
         commit('SET_RESERVATIONS', response.data);
       } catch (error) {
         console.error('Error al obtener las reservas:', error.response ? error.response.data : error.message);

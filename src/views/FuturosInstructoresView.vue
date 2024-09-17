@@ -46,7 +46,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      instructores: [], // Almacena los datos de los instructores
+      instructores: [], 
       // Imágenes personalizadas para los instructores
       imagenesInstructores: [
           '../../public/img/img-futuros-profesores/1.jpeg',
@@ -69,13 +69,13 @@ export default {
     async fetchInstructores() {
       try {
         const response = await axios.get('https://randomuser.me/api/?results=8');
-        this.instructores = response.data.results; // Guardar los resultados de la API
+        this.instructores = response.data.results; 
       } catch (error) {
         console.error('Error fetching instructors:', error);
       }
     },
     getInstructorImage(index) {
-      // Devuelve la imagen personalizada correspondiente al índice del instructor
+      
       return this.imagenesInstructores[index % this.imagenesInstructores.length];
     },
   },
@@ -83,5 +83,5 @@ export default {
 </script>
 
 <style  scoped>
-/* Puedes personalizar los estilos aquí si es necesario */
+
 </style>

@@ -18,7 +18,7 @@ const routes = [
   { path: '/admin', name: 'admin', component: AdminPanel, meta: { requiresAdmin: true } },
   { path: '/instructores', name: 'instructores', component: InstructoresView },
   { path: '/futuros-instructores', name: 'futuros-instructores', component: FuturosInstructoresView },
-  // Eliminado: { path: '/:pathMatch(.*)*', name: '404', component: NotFound },  
+ 
 ];
 
 const router = createRouter({

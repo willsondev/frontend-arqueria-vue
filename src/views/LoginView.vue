@@ -42,7 +42,7 @@
 
 <script>
 import { mapActions } from 'vuex';
-import { useToast } from 'vue-toast-notification'; // Importa Vue Toast Notification
+import { useToast } from 'vue-toast-notification'; 
 
 export default {
   data() {
@@ -54,7 +54,7 @@ export default {
   methods: {
     ...mapActions(['loginUser']),
     async loginUser() {
-      const toast = useToast(); // Inicializa el toast para las notificaciones
+      const toast = useToast(); 
 
       try {
         // Llama a la acción 'loginUser' y pasa los datos de inicio de sesión
@@ -73,14 +73,14 @@ export default {
 
         // Imprime la información de inicio de sesión en la consola
         console.log('Inicio de sesión exitoso!');
-        console.log('Token:', response.token); // Debería estar presente en la respuesta
-        console.log('Usuario:', response.user); // Debería estar presente en la respuesta
+        console.log('Token:', response.token); 
+        console.log('Usuario:', response.user); 
 
-        // Redirige a la página principal o a donde sea necesario
+    
         this.$router.push('/home');
 
       } catch (error) {
-        // Manejo de errores basado en las respuestas del backend
+
         if (error.response && error.response.data && error.response.data.error) {
           toast.error(error.response.data.error, {
             position: 'top-right',
@@ -98,5 +98,5 @@ export default {
 </script>
 
 <style scoped>
-/* No es necesario agregar estilos personalizados aquí, ya que Tailwind CSS cubre el diseño */
+
 </style>

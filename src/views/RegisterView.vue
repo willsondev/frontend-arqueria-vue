@@ -65,7 +65,7 @@
 
 <script>
 import { mapActions } from 'vuex';
-import { useToast } from 'vue-toast-notification'; // Importa Vue Toast Notification
+import { useToast } from 'vue-toast-notification'; 
 
 export default {
   data() {
@@ -79,10 +79,10 @@ export default {
   methods: {
     ...mapActions(['registerUser']),
     async registerUser() {
-      const toast = useToast(); // Inicializa el toast para las notificaciones
+      const toast = useToast(); 
 
       try {
-        // Llama a la acción 'registerUser' y pasa los datos de registro
+      
         const response = await this.$store.dispatch('registerUser', {
           name: this.name,
           email: this.email,
@@ -95,21 +95,21 @@ export default {
           position: 'top-right',
         });
 
-        // Si el rol es 'admin', mostrar advertencia adicional
+     
         if (this.role === 'admin') {
           toast.info('Este registro como administrador es solo para prueba, ya que es un proyecto de portafolio.', {
             position: 'top-right',
           });
         }
 
-        // Redirige al login
+      
         this.$router.push('/login');
 
-        // Imprime la información de registro en la consola
+        
        
 
       } catch (error) {
-        // Manejo de errores basado en las respuestas del backend
+       
         if (error.response && error.response.data && error.response.data.error) {
           toast.error(error.response.data.error, {
             position: 'top-right',
@@ -127,5 +127,5 @@ export default {
 </script>
 
 <style scoped>
-/* No es necesario agregar estilos personalizados aquí, ya que Tailwind CSS cubre el diseño */
+
 </style>
